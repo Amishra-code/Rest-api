@@ -16,6 +16,11 @@ public interface EmployeeRepo extends JpaRepository<Employee, Integer> {
     @Query("SELECT e FROM Employee e JOIN FETCH e.city JOIN FETCH e.dept")
     List<Employee> findAllEmployeesWithCityAndDepartment();
 
+    boolean existsByMob(String mob);
+    boolean existsByEmail(String email);
+    boolean existsByMobAndEmpIdNot(String mob, Integer empId);
+    boolean existsByEmailAndEmpIdNot(String email, Integer empId);
+
     List<Employee> findByCity_CityId(int cityId);
     List<Employee> findByDept_DeptId(int deptId);
 }

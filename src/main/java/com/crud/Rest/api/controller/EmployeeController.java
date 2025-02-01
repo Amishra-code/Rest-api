@@ -17,9 +17,10 @@ public class EmployeeController {
     private EmployeeService service;
 
     /** Creates a new employee and returns the saved employee with 201 status, or 500 if an error occurs. */
-    @PostMapping("/employee")
+    @PostMapping("/employee/create")
     public ResponseEntity<Employee> createEmployee(@RequestBody Employee emp) {
         Employee savedEmployee = service.createEmployee(emp);
+        System.out.println(emp);
         if (savedEmployee != null) {
             return new ResponseEntity<>(savedEmployee, HttpStatus.CREATED);
         } else {
@@ -35,7 +36,7 @@ public class EmployeeController {
 
     /** Retrieves an employee by ID and returns it with 302 Found status if found, or 404 Not Found if not. */
     @GetMapping("/employee/{id}")
-    public ResponseEntity<Employee> getProduct(@PathVariable int id) {
+    public ResponseEntity<Employee> getEmployee(@PathVariable int id) {
         Employee fetchedEmployee = service.getEmployee(id);
         if (fetchedEmployee != null) {
             return new ResponseEntity<>(fetchedEmployee, HttpStatus.FOUND);
@@ -46,7 +47,7 @@ public class EmployeeController {
 
     /** Updates an employee by ID and returns 200 OK if successful, or 400 Bad Request if update fails. */
     @PutMapping("/employee/{id}")
-    public ResponseEntity<String> updateProduct(@PathVariable int id, @RequestBody Employee emp) throws IOException {
+    public ResponseEntity<String> updateEmployee(@PathVariable int id, @RequestBody Employee emp) throws IOException {
         Employee updatedEmployee = null;
         try {
             updatedEmployee=service.updateEmployee(id, emp);
@@ -61,7 +62,7 @@ public class EmployeeController {
 
     /** Deletes an employee by ID and returns 200 OK if successful, or 404 Not Found if the employee doesn't exist. */
     @DeleteMapping("/employee/{id}")
-    public ResponseEntity<String> deleteProduct(@PathVariable int id) {
+    public ResponseEntity<String> deleteEmployee(@PathVariable int id) {
         Employee deletedEmployee = service.getEmployee(id);
         if(deletedEmployee!=null) {
             service.deleteEmployee(id);

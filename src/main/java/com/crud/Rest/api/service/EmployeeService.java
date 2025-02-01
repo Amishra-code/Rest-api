@@ -27,6 +27,14 @@ public class EmployeeService {
 
     /** Creates a new employee and returns it, or throws an exception if a database or unexpected error occurs. */
     public Employee createEmployee(Employee employee) {
+        if (_empRepo.existsByMobAndEmpIdNot(employee.getMob(), employee.getEmpId())) {
+            System.out.println("Mobile number already exists for another employee");
+            throw new RuntimeException("Mobile number already exists for another employee");
+        }
+        if (_empRepo.existsByEmailAndEmpIdNot(employee.getEmail(), employee.getEmpId())) {
+            System.out.println("Email already exists for another employee");
+            throw new RuntimeException("Email already exists for another employee");
+        }
         try {
             return _empRepo.save(employee);
         } catch (DataAccessException e) {
@@ -66,6 +74,12 @@ public class EmployeeService {
 
     /** Updates an employee's details by ID and returns the updated employee, or throws exceptions if any error occurs. */
     public Employee updateEmployee(int id, Employee emp) throws IOException {
+        if (_empRepo.existsByMobAndEmpIdNot(emp.getMob(), emp.getEmpId())) {
+            throw new RuntimeException("Mobile number already exists for another employee");
+        }
+        if (_empRepo.existsByEmailAndEmpIdNot(emp.getEmail(), emp.getEmpId())) {
+            throw new RuntimeException("Email already exists for another employee");
+        }
         Employee existingEmp = _empRepo.findById(id)
                 .orElseThrow(() -> new RuntimeException("Employee not found with ID: " + id));
 
