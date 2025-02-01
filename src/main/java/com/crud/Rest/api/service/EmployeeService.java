@@ -8,6 +8,8 @@ import com.crud.Rest.api.repository.DepartmentRepo;
 import com.crud.Rest.api.repository.EmployeeRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 import java.io.IOException;
 import java.util.List;
@@ -47,9 +49,10 @@ public class EmployeeService {
     }
 
     /** Retrieves all employees with city and department details, or throws an exception if a database or unexpected error occurs. */
-    public List<Employee> getAllEmployees() {
+    public Page<Employee> getAllEmployees(int pageNumber, int pageSize) {
         try {
-            return _empRepo.findAllEmployeesWithCityAndDepartment();
+            PageRequest pageRequest = PageRequest.of(pageNumber, pageSize);
+            return _empRepo.findAllEmployeesWithCityAndDepartment(pageRequest);
         } catch (DataAccessException e) {
             System.out.println("Database access error while fetching employees: " + e.getMessage());
             throw new RuntimeException("Database error: Unable to fetch employees.");

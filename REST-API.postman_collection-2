@@ -1,0 +1,1483 @@
+{
+	"info": {
+		"_postman_id": "3b615b46-53d5-4f6b-9634-c89bcbb5ea28",
+		"name": "REST-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22725392",
+		"_collection_link": "https://spring-4566.postman.co/workspace/Spring-Workspace~b3a0c219-3fa6-4609-8f3e-b7d3df7727e7/collection/22725392-3b615b46-53d5-4f6b-9634-c89bcbb5ea28?action=share&source=collection_link&creator=22725392"
+	},
+	"item": [
+		{
+			"name": "Get Employee By Id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiYWRtaW4iLCJzdWIiOiJtaXNocmEiLCJpYXQiOjE3MzgzOTA5NDUsImV4cCI6MTczODM5MTA1M30.y-ZGYuSNrAllCjXyJX6jkA79ok3qtZAE1bX6CFlhGPI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/employee/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"employee",
+						"4"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Employee By Id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/employee/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"employee",
+								"4"
+							]
+						}
+					},
+					"status": "Found",
+					"code": 302,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 01 Feb 2025 10:07:29 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"empId\": 4,\n    \"firstName\": \"Anjali\",\n    \"lastName\": \"Mishra\",\n    \"dept\": {\n        \"deptId\": 4,\n        \"deptName\": \"Sales\"\n    },\n    \"address\": \"321 Sales Street\",\n    \"city\": {\n        \"cityId\": 4,\n        \"cityName\": \"Boston\"\n    },\n    \"date_Of_Joining\": \"2023-04-05\",\n    \"job_Title\": \"Sales Director\",\n    \"salary\": 90000,\n    \"mob\": \"9876543213\",\n    \"email\": \"sarah.davis@company.com\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get All Employees",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiYWRtaW4iLCJzdWIiOiJtaXNocmEiLCJpYXQiOjE3MzgzOTA5NDUsImV4cCI6MTczODM5MTA1M30.y-ZGYuSNrAllCjXyJX6jkA79ok3qtZAE1bX6CFlhGPI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/employees",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"employees"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get All Employees",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/employees",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"employees"
+							]
+						}
+					},
+					"status": "Found",
+					"code": 302,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 01 Feb 2025 10:08:37 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"empId\": 4,\n        \"firstName\": \"Anjali\",\n        \"lastName\": \"Mishra\",\n        \"dept\": {\n            \"deptId\": 4,\n            \"deptName\": \"Sales\"\n        },\n        \"address\": \"321 Sales Street\",\n        \"city\": {\n            \"cityId\": 4,\n            \"cityName\": \"Boston\"\n        },\n        \"date_Of_Joining\": \"2023-04-05\",\n        \"job_Title\": \"Sales Director\",\n        \"salary\": 90000,\n        \"mob\": \"9876543213\",\n        \"email\": \"sarah.davis@company.com\"\n    },\n    {\n        \"empId\": 5,\n        \"firstName\": \"James\",\n        \"lastName\": \"Wilson\",\n        \"dept\": {\n            \"deptId\": 5,\n            \"deptName\": \"Finance\"\n        },\n        \"address\": \"654 Finance Road\",\n        \"city\": {\n            \"cityId\": 5,\n            \"cityName\": \"Seattle\"\n        },\n        \"date_Of_Joining\": \"2023-05-12\",\n        \"job_Title\": \"Financial Analyst\",\n        \"salary\": 82000,\n        \"mob\": \"9876543214\",\n        \"email\": \"james.wilson@company.com\"\n    },\n    {\n        \"empId\": 6,\n        \"firstName\": \"Lisa\",\n        \"lastName\": \"Anderson\",\n        \"dept\": {\n            \"deptId\": 6,\n            \"deptName\": \"Operations\"\n        },\n        \"address\": \"987 Ops Circle\",\n        \"city\": {\n            \"cityId\": 6,\n            \"cityName\": \"Austin\"\n        },\n        \"date_Of_Joining\": \"2023-06-18\",\n        \"job_Title\": \"Operations Manager\",\n        \"salary\": 88000,\n        \"mob\": \"9876543215\",\n        \"email\": \"lisa.anderson@company.com\"\n    },\n    {\n        \"empId\": 7,\n        \"firstName\": \"David\",\n        \"lastName\": \"Taylor\",\n        \"dept\": {\n            \"deptId\": 7,\n            \"deptName\": \"Research & Development\"\n        },\n        \"address\": \"147 Research Drive\",\n        \"city\": {\n            \"cityId\": 7,\n            \"cityName\": \"Miami\"\n        },\n        \"date_Of_Joining\": \"2023-07-22\",\n        \"job_Title\": \"Research Scientist\",\n        \"salary\": 92000,\n        \"mob\": \"9876543216\",\n        \"email\": \"david.taylor@company.com\"\n    },\n    {\n        \"empId\": 8,\n        \"firstName\": \"Amy\",\n        \"lastName\": \"Martinez\",\n        \"dept\": {\n            \"deptId\": 8,\n            \"deptName\": \"Customer Support\"\n        },\n        \"address\": \"258 Support Street\",\n        \"city\": {\n            \"cityId\": 8,\n            \"cityName\": \"Denver\"\n        },\n        \"date_Of_Joining\": \"2023-08-30\",\n        \"job_Title\": \"Support Team Lead\",\n        \"salary\": 78000,\n        \"mob\": \"9876543217\",\n        \"email\": \"amy.martinez@company.com\"\n    },\n    {\n        \"empId\": 9,\n        \"firstName\": \"Sarah\",\n        \"lastName\": \"Davis\",\n        \"dept\": {\n            \"deptId\": 4,\n            \"deptName\": \"Sales\"\n        },\n        \"address\": \"321 Sales Street\",\n        \"city\": {\n            \"cityId\": 4,\n            \"cityName\": \"Boston\"\n        },\n        \"date_Of_Joining\": \"2023-04-05\",\n        \"job_Title\": \"Sales Director\",\n        \"salary\": 90000,\n        \"mob\": \"9876543213\",\n        \"email\": \"sarah.davis@company.com\"\n    },\n    {\n        \"empId\": 10,\n        \"firstName\": \"Test\",\n        \"lastName\": \"User\",\n        \"dept\": {\n            \"deptId\": 1,\n            \"deptName\": \"Engineering\"\n        },\n        \"address\": \"123 Street Name\",\n        \"city\": {\n            \"cityId\": 1,\n            \"cityName\": \"New York\"\n        },\n        \"date_Of_Joining\": \"2025-02-01\",\n        \"job_Title\": \"Software Engineer\",\n        \"salary\": 50000,\n        \"mob\": \"9876543211\",\n        \"email\": \"anjali.doe@example.com\"\n    }\n]"
+				},
+				{
+					"name": "Get All Employees with pagination (pageSize=5)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/employees?pageNumber=0&pageSize=5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"employees"
+							],
+							"query": [
+								{
+									"key": "pageNumber",
+									"value": "0"
+								},
+								{
+									"key": "pageSize",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"status": "Found",
+					"code": 302,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 01 Feb 2025 16:06:44 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"content\": [\n        {\n            \"empId\": 3,\n            \"firstName\": \"Alice\",\n            \"lastName\": \"Johnson\",\n            \"dept\": {\n                \"deptId\": 3,\n                \"deptName\": \"Engineering\"\n            },\n            \"address\": \"789 Pine Rd\",\n            \"city\": {\n                \"cityId\": 3,\n                \"cityName\": \"Chicago\"\n            },\n            \"date_Of_Joining\": \"2020-08-10\",\n            \"job_Title\": \"Marketing Specialist\",\n            \"salary\": 55000,\n            \"mob\": \"9876543212\",\n            \"email\": \"alice.johnson@email.com\"\n        },\n        {\n            \"empId\": 7,\n            \"firstName\": \"Emma\",\n            \"lastName\": \"Green\",\n            \"dept\": {\n                \"deptId\": 3,\n                \"deptName\": \"Engineering\"\n            },\n            \"address\": \"999 Elm Blvd\",\n            \"city\": {\n                \"cityId\": 2,\n                \"cityName\": \"Los Angeles\"\n            },\n            \"date_Of_Joining\": \"2018-09-30\",\n            \"job_Title\": \"Marketing Lead\",\n            \"salary\": 82000,\n            \"mob\": \"9876543216\",\n            \"email\": \"emma.green@email.com\"\n        },\n        {\n            \"empId\": 11,\n            \"firstName\": \"Ivy\",\n            \"lastName\": \"Pink\",\n            \"dept\": {\n                \"deptId\": 3,\n                \"deptName\": \"Engineering\"\n            },\n            \"address\": \"444 Cherry Ln\",\n            \"city\": {\n                \"cityId\": 1,\n                \"cityName\": \"New York\"\n            },\n            \"date_Of_Joining\": \"2023-04-23\",\n            \"job_Title\": \"Marketing Analyst\",\n            \"salary\": 53000,\n            \"mob\": \"9876543220\",\n            \"email\": \"ivy.pink@email.com\"\n        },\n        {\n            \"empId\": 20,\n            \"firstName\": \"Rachel\",\n            \"lastName\": \"Magenta\",\n            \"dept\": {\n                \"deptId\": 3,\n                \"deptName\": \"Engineering\"\n            },\n            \"address\": \"5050 Grape Rd\",\n            \"city\": {\n                \"cityId\": 5,\n                \"cityName\": \"Miami\"\n            },\n            \"date_Of_Joining\": \"2023-02-28\",\n            \"job_Title\": \"Brand Manager\",\n            \"salary\": 69000,\n            \"mob\": \"9876543229\",\n            \"email\": \"rachel.magenta@email.com\"\n        },\n        {\n            \"empId\": 2,\n            \"firstName\": \"Jane\",\n            \"lastName\": \"Smith\",\n            \"dept\": {\n                \"deptId\": 2,\n                \"deptName\": \"Finance\"\n            },\n            \"address\": \"456 Oak Ave\",\n            \"city\": {\n                \"cityId\": 2,\n                \"cityName\": \"Los Angeles\"\n            },\n            \"date_Of_Joining\": \"2021-05-22\",\n            \"job_Title\": \"HR Manager\",\n            \"salary\": 75000,\n            \"mob\": \"9876543211\",\n            \"email\": \"jane.smith@email.com\"\n        }\n    ],\n    \"pageable\": {\n        \"pageNumber\": 0,\n        \"pageSize\": 5,\n        \"sort\": {\n            \"empty\": true,\n            \"sorted\": false,\n            \"unsorted\": true\n        },\n        \"offset\": 0,\n        \"paged\": true,\n        \"unpaged\": false\n    },\n    \"last\": false,\n    \"totalPages\": 4,\n    \"totalElements\": 20,\n    \"size\": 5,\n    \"number\": 0,\n    \"sort\": {\n        \"empty\": true,\n        \"sorted\": false,\n        \"unsorted\": true\n    },\n    \"first\": true,\n    \"numberOfElements\": 5,\n    \"empty\": false\n}"
+				},
+				{
+					"name": "Get All Employees with pagination (pageSize=10)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/employees?pageNumber=0&pageSize=10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"employees"
+							],
+							"query": [
+								{
+									"key": "pageNumber",
+									"value": "0"
+								},
+								{
+									"key": "pageSize",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"status": "Found",
+					"code": 302,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 01 Feb 2025 16:09:30 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"content\": [\n        {\n            \"empId\": 3,\n            \"firstName\": \"Alice\",\n            \"lastName\": \"Johnson\",\n            \"dept\": {\n                \"deptId\": 3,\n                \"deptName\": \"Engineering\"\n            },\n            \"address\": \"789 Pine Rd\",\n            \"city\": {\n                \"cityId\": 3,\n                \"cityName\": \"Chicago\"\n            },\n            \"date_Of_Joining\": \"2020-08-10\",\n            \"job_Title\": \"Marketing Specialist\",\n            \"salary\": 55000,\n            \"mob\": \"9876543212\",\n            \"email\": \"alice.johnson@email.com\"\n        },\n        {\n            \"empId\": 7,\n            \"firstName\": \"Emma\",\n            \"lastName\": \"Green\",\n            \"dept\": {\n                \"deptId\": 3,\n                \"deptName\": \"Engineering\"\n            },\n            \"address\": \"999 Elm Blvd\",\n            \"city\": {\n                \"cityId\": 2,\n                \"cityName\": \"Los Angeles\"\n            },\n            \"date_Of_Joining\": \"2018-09-30\",\n            \"job_Title\": \"Marketing Lead\",\n            \"salary\": 82000,\n            \"mob\": \"9876543216\",\n            \"email\": \"emma.green@email.com\"\n        },\n        {\n            \"empId\": 11,\n            \"firstName\": \"Ivy\",\n            \"lastName\": \"Pink\",\n            \"dept\": {\n                \"deptId\": 3,\n                \"deptName\": \"Engineering\"\n            },\n            \"address\": \"444 Cherry Ln\",\n            \"city\": {\n                \"cityId\": 1,\n                \"cityName\": \"New York\"\n            },\n            \"date_Of_Joining\": \"2023-04-23\",\n            \"job_Title\": \"Marketing Analyst\",\n            \"salary\": 53000,\n            \"mob\": \"9876543220\",\n            \"email\": \"ivy.pink@email.com\"\n        },\n        {\n            \"empId\": 20,\n            \"firstName\": \"Rachel\",\n            \"lastName\": \"Magenta\",\n            \"dept\": {\n                \"deptId\": 3,\n                \"deptName\": \"Engineering\"\n            },\n            \"address\": \"5050 Grape Rd\",\n            \"city\": {\n                \"cityId\": 5,\n                \"cityName\": \"Miami\"\n            },\n            \"date_Of_Joining\": \"2023-02-28\",\n            \"job_Title\": \"Brand Manager\",\n            \"salary\": 69000,\n            \"mob\": \"9876543229\",\n            \"email\": \"rachel.magenta@email.com\"\n        },\n        {\n            \"empId\": 2,\n            \"firstName\": \"Jane\",\n            \"lastName\": \"Smith\",\n            \"dept\": {\n                \"deptId\": 2,\n                \"deptName\": \"Finance\"\n            },\n            \"address\": \"456 Oak Ave\",\n            \"city\": {\n                \"cityId\": 2,\n                \"cityName\": \"Los Angeles\"\n            },\n            \"date_Of_Joining\": \"2021-05-22\",\n            \"job_Title\": \"HR Manager\",\n            \"salary\": 75000,\n            \"mob\": \"9876543211\",\n            \"email\": \"jane.smith@email.com\"\n        },\n        {\n            \"empId\": 6,\n            \"firstName\": \"David\",\n            \"lastName\": \"Black\",\n            \"dept\": {\n                \"deptId\": 2,\n                \"deptName\": \"Finance\"\n            },\n            \"address\": \"777 Cedar Ct\",\n            \"city\": {\n                \"cityId\": 1,\n                \"cityName\": \"New York\"\n            },\n            \"date_Of_Joining\": \"2021-11-11\",\n            \"job_Title\": \"HR Assistant\",\n            \"salary\": 48000,\n            \"mob\": \"9876543215\",\n            \"email\": \"david.black@email.com\"\n        },\n        {\n            \"empId\": 15,\n            \"firstName\": \"Mia\",\n            \"lastName\": \"Gold\",\n            \"dept\": {\n                \"deptId\": 2,\n                \"deptName\": \"Finance\"\n            },\n            \"address\": \"999 Hickory St\",\n            \"city\": {\n                \"cityId\": 5,\n                \"cityName\": \"Miami\"\n            },\n            \"date_Of_Joining\": \"2018-01-29\",\n            \"job_Title\": \"HR Coordinator\",\n            \"salary\": 57000,\n            \"mob\": \"9876543224\",\n            \"email\": \"mia.gold@email.com\"\n        },\n        {\n            \"empId\": 19,\n            \"firstName\": \"Quinn\",\n            \"lastName\": \"Violet\",\n            \"dept\": {\n                \"deptId\": 2,\n                \"deptName\": \"Finance\"\n            },\n            \"address\": \"4040 Banana St\",\n            \"city\": {\n                \"cityId\": 4,\n                \"cityName\": \"Houston\"\n            },\n            \"date_Of_Joining\": \"2016-06-14\",\n            \"job_Title\": \"HR Business Partner\",\n            \"salary\": 82000,\n            \"mob\": \"9876543228\",\n            \"email\": \"quinn.violet@email.com\"\n        },\n        {\n            \"empId\": 1,\n            \"firstName\": \"John\",\n            \"lastName\": \"Doe\",\n            \"dept\": {\n                \"deptId\": 1,\n                \"deptName\": \"HR\"\n            },\n            \"address\": \"123 Main St\",\n            \"city\": {\n                \"cityId\": 1,\n                \"cityName\": \"New York\"\n            },\n            \"date_Of_Joining\": \"2022-01-15\",\n            \"job_Title\": \"Software Engineer\",\n            \"salary\": 60000,\n            \"mob\": \"9876543210\",\n            \"email\": \"john.doe@email.com\"\n        },\n        {\n            \"empId\": 10,\n            \"firstName\": \"Henry\",\n            \"lastName\": \"Orange\",\n            \"dept\": {\n                \"deptId\": 1,\n                \"deptName\": \"HR\"\n            },\n            \"address\": \"111 Palm Dr\",\n            \"city\": {\n                \"cityId\": 5,\n                \"cityName\": \"Miami\"\n            },\n            \"date_Of_Joining\": \"2017-12-05\",\n            \"job_Title\": \"Lead Developer\",\n            \"salary\": 90000,\n            \"mob\": \"9876543219\",\n            \"email\": \"henry.orange@email.com\"\n        }\n    ],\n    \"pageable\": {\n        \"pageNumber\": 0,\n        \"pageSize\": 10,\n        \"sort\": {\n            \"empty\": true,\n            \"sorted\": false,\n            \"unsorted\": true\n        },\n        \"offset\": 0,\n        \"paged\": true,\n        \"unpaged\": false\n    },\n    \"last\": false,\n    \"totalPages\": 2,\n    \"totalElements\": 20,\n    \"size\": 10,\n    \"number\": 0,\n    \"sort\": {\n        \"empty\": true,\n        \"sorted\": false,\n        \"unsorted\": true\n    },\n    \"first\": true,\n    \"numberOfElements\": 10,\n    \"empty\": false\n}"
+				}
+			]
+		},
+		{
+			"name": "Update employee's details",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoidXNlciIsInN1YiI6ImFuamFsaSIsImlhdCI6MTczODM1MDU1MSwiZXhwIjoxNzM4MzUwNjU5fQ.yZZQw7jNi6Xy80t7fzlontE0zZwLt90NnaRaDdFOEZU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"empId\": 1,\r\n    \"firstName\": \"John\",\r\n    \"lastName\": \"Smith\",\r\n    \"dept\": {\r\n        \"deptId\": 1,\r\n        \"deptName\": \"Engineering\"\r\n    },\r\n    \"address\": \"123 Tech Lane\",\r\n    \"city\": {\r\n        \"cityId\": 1,\r\n        \"cityName\": \"New York\"\r\n    },\r\n    \"date_Of_Joining\": \"2023-01-15\",\r\n    \"job_Title\": \"Senior Engineer\",\r\n    \"salary\": 95000.0,\r\n    \"mob\": \"9876543210\",\r\n    \"email\": \"john.smith@company.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/employee/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"employee",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update employee's details",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"empId\": 4,\r\n    \"firstName\": \"Anjali\",\r\n    \"lastName\": \"Mishra\",\r\n    \"dept\": {\r\n        \"deptId\": 4,\r\n        \"deptName\": \"Sales\"\r\n    },\r\n    \"address\": \"321 Sales Street\",\r\n    \"city\": {\r\n        \"cityId\": 4,\r\n        \"cityName\": \"Boston\"\r\n    },\r\n    \"date_Of_Joining\": \"2023-04-05\",\r\n    \"job_Title\": \"Sales Director\",\r\n    \"salary\": 90000,\r\n    \"mob\": \"9876543213\",\r\n    \"email\": \"sarah.davis@company.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/employee/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"employee",
+								"4"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "7"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 01 Feb 2025 09:22:41 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "Updated"
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"mishra\",\r\n    \"password\": \"mishra456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"anjali\",\r\n    \"password\": \"anjali123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "151"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 01 Feb 2025 10:07:20 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoidXNlciIsInN1YiI6ImFuamFsaSIsImlhdCI6MTczODQwNDQ0MCwiZXhwIjoxNzM4NDA0NTQ4fQ.S0pdB2xO3sUzHbxtK1bXR3F32nNyHRd5A1u7lARP44Y"
+				},
+				{
+					"name": "Login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    //ROLE: admin, can delete\r\n    \"username\": \"mishra\",\r\n    \"password\": \"mishra456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "152"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 01 Feb 2025 10:10:31 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiYWRtaW4iLCJzdWIiOiJtaXNocmEiLCJpYXQiOjE3Mzg0MDQ2MzEsImV4cCI6MTczODQwNDczOX0.SwThF8T1mO4HbZYBPTlq7I5ya03fLlHLQ4-dxBOhZXo"
+				},
+				{
+					"name": "Login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"anjali\",\r\n    \"password\": \"anjali123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "151"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 01 Feb 2025 12:49:09 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoidXNlciIsInN1YiI6ImFuamFsaSIsImlhdCI6MTczODQxNDE0OCwiZXhwIjoxNzM4NDE0MjU2fQ.CjmYpcbDbNGOuHxqkMbpgzr9CulMXRn1-0z9JryZc-8"
+				},
+				{
+					"name": "Login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"mishra\",\r\n    \"password\": \"mishra456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "152"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 01 Feb 2025 12:49:57 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiYWRtaW4iLCJzdWIiOiJtaXNocmEiLCJpYXQiOjE3Mzg0MTQxOTcsImV4cCI6MTczODQxNDMwNX0.ujXo2cSAt92MGmNvbeKdoFd-IBqWR8lKl-bvDFf7zDg"
+				},
+				{
+					"name": "Login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"mishra\",\r\n    \"password\": \"mishra456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "152"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 01 Feb 2025 16:05:40 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiYWRtaW4iLCJzdWIiOiJtaXNocmEiLCJpYXQiOjE3Mzg0MjU5NDAsImV4cCI6MTczODQyNjA0OH0.bSzaS6AbdcSFFhI-pQ-OhvWcpYl1ziPEAgg-orAIupE"
+				}
+			]
+		},
+		{
+			"name": "Delete Employee",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiYWRtaW4iLCJzdWIiOiJtaXNocmEiLCJpYXQiOjE3MzgzNTEyOTIsImV4cCI6MTczODM1MTQwMH0.0OF8kllMF8XmNBCivNvwdpKA_izcm-8JfH6Q6edwNVo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/employee/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"employee",
+						"3"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete Employee (role -> admin logged in)",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/employee/9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"employee",
+								"9"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "23"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 01 Feb 2025 10:10:54 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "Deleted Employee's data"
+				},
+				{
+					"name": "Delete Employee (role -> user logged in)",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/employee/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"employee",
+								"8"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "WWW-Authenticate",
+							"value": "Basic realm=\"Realm\""
+						},
+						{
+							"key": "Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 01 Feb 2025 12:49:35 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "Delete Employee",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/employee/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"employee",
+								"8"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "23"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 01 Feb 2025 12:50:09 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "Deleted Employee's data"
+				}
+			]
+		},
+		{
+			"name": "Create Employee",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiYWRtaW4iLCJzdWIiOiJtaXNocmEiLCJpYXQiOjE3MzgzNTQ2MjAsImV4cCI6MTczODM1NDcyOH0.exhE9ULgGplIKMUJAqVFD6j9C66-ZD-RLNK7_06LrBg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"firstName\": \"Sarah\",\r\n        \"lastName\": \"Davis\",\r\n        \"dept\": {\r\n            \"deptId\": 4,\r\n            \"deptName\": \"Sales\"\r\n        },\r\n        \"address\": \"321 Sales Street\",\r\n        \"city\": {\r\n            \"cityId\": 4,\r\n            \"cityName\": \"Boston\"\r\n        },\r\n        \"date_Of_Joining\": \"2023-04-05\",\r\n        \"job_Title\": \"Sales Director\",\r\n        \"salary\": 90000.0,\r\n        \"mob\": \"9876543213\",\r\n        \"email\": \"sarah.davis@company.com\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/employee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"employee"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create Employee",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"firstName\": \"Test\",\r\n  \"lastName\": \"User\",\r\n  \"address\": \"123 Street Name\",\r\n  \"date_Of_Joining\": \"2025-02-01\",\r\n  \"job_Title\": \"Software Engineer\",\r\n  \"salary\": 50000.0,\r\n  \"mob\": \"9876543211\",\r\n  \"email\": \"anjali.doe@example.com\",\r\n  \"dept\": { \"deptId\": 1 },    \r\n  \"city\": { \"cityId\": 1 }     \r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/employee/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"employee",
+								"create"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 01 Feb 2025 10:07:37 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"empId\": 10,\n    \"firstName\": \"Test\",\n    \"lastName\": \"User\",\n    \"dept\": {\n        \"deptId\": 1,\n        \"deptName\": null\n    },\n    \"address\": \"123 Street Name\",\n    \"city\": {\n        \"cityId\": 1,\n        \"cityName\": null\n    },\n    \"date_Of_Joining\": \"2025-02-01\",\n    \"job_Title\": \"Software Engineer\",\n    \"salary\": 50000,\n    \"mob\": \"9876543211\",\n    \"email\": \"anjali.doe@example.com\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Employees From a City",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiYWRtaW4iLCJzdWIiOiJtaXNocmEiLCJpYXQiOjE3MzgzOTExODAsImV4cCI6MTczODM5MTI4OH0.w2ISNKS_FTboxDUJkYLtX1P8HkQ2U_90jjnzwGojY1E",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/employees_city/7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"employees_city",
+						"7"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Employees From a City",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/employees_city/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"employees_city",
+								"7"
+							]
+						}
+					},
+					"status": "Found",
+					"code": 302,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 01 Feb 2025 10:08:54 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"empId\": 7,\n        \"firstName\": \"David\",\n        \"lastName\": \"Taylor\",\n        \"dept\": {\n            \"deptId\": 7,\n            \"deptName\": \"Research & Development\"\n        },\n        \"address\": \"147 Research Drive\",\n        \"city\": {\n            \"cityId\": 7,\n            \"cityName\": \"Miami\"\n        },\n        \"date_Of_Joining\": \"2023-07-22\",\n        \"job_Title\": \"Research Scientist\",\n        \"salary\": 92000,\n        \"mob\": \"9876543216\",\n        \"email\": \"david.taylor@company.com\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Get Employee from a Department",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiYWRtaW4iLCJzdWIiOiJtaXNocmEiLCJpYXQiOjE3MzgzOTEzMTAsImV4cCI6MTczODM5MTQxOH0.udg-gjzG_5MGnyzMvfHoV7Tu8nQ_MSuvnKb2ROe1ckY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/employees_dept/8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"employees_dept",
+						"8"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Employee from a Department",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/employees_dept/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"employees_dept",
+								"8"
+							]
+						}
+					},
+					"status": "Found",
+					"code": 302,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 01 Feb 2025 10:09:53 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"empId\": 8,\n        \"firstName\": \"Amy\",\n        \"lastName\": \"Martinez\",\n        \"dept\": {\n            \"deptId\": 8,\n            \"deptName\": \"Customer Support\"\n        },\n        \"address\": \"258 Support Street\",\n        \"city\": {\n            \"cityId\": 8,\n            \"cityName\": \"Denver\"\n        },\n        \"date_Of_Joining\": \"2023-08-30\",\n        \"job_Title\": \"Support Team Lead\",\n        \"salary\": 78000,\n        \"mob\": \"9876543217\",\n        \"email\": \"amy.martinez@company.com\"\n    }\n]"
+				}
+			]
+		}
+	]
+}

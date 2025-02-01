@@ -2,6 +2,7 @@ package com.crud.Rest.api.controller;
 import com.crud.Rest.api.model.Employee;
 import com.crud.Rest.api.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -30,8 +31,10 @@ public class EmployeeController {
 
     /** Retrieves a list of all employees and returns it with a 302 Found status. */
     @GetMapping("/employees")
-    public ResponseEntity<List<Employee>> getAllEmployees() {
-        return new ResponseEntity<>(service.getAllEmployees(), HttpStatus.FOUND);
+    public ResponseEntity<Page<Employee>> getAllEmployees(
+            @RequestParam(defaultValue = "0") int pageNumber,
+            @RequestParam(defaultValue = "10") int pageSize) {
+        return new ResponseEntity<>(service.getAllEmployees(pageNumber, pageSize), HttpStatus.FOUND);
     }
 
     /** Retrieves an employee by ID and returns it with 302 Found status if found, or 404 Not Found if not. */
